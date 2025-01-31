@@ -1,0 +1,19 @@
+services:
+  dev-container:
+    image: node:22
+    volumes:
+      - ../src:/src
+    command: sleep infinity
+
+  postgres:
+    image: postgres:latest
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+
+volumes:
+  postgres-data:

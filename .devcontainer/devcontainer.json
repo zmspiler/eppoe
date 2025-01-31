@@ -1,0 +1,6 @@
+{
+  name: "eppoe-dev",
+  dockerComposeFile: "docker-compose.yaml",
+  service: "dev-container",
+  workspaceFolder: "/src"
+}
