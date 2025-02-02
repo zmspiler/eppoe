@@ -1,15 +1,15 @@
 import 'dotenv/config';
-import * as process from "node:process";
-import {logger} from "@/logger";
+import * as process from 'node:process';
+import { logger } from '@/logger';
 
 export class Environment {
-  public static isProduction = process.env.NODE_ENV === "production";
+  public static isProduction = process.env.NODE_ENV === 'production';
 
   public static get databaseUrl() {
     const url = process.env.DATABASE_URL;
 
-    if(!url) {
-      logger.error("DATABASE_URL is not set");
+    if (!url) {
+      logger.error('DATABASE_URL is not set');
       process.exit(1);
     }
 
@@ -17,10 +17,10 @@ export class Environment {
   }
 
   public static get host() {
-    return this.isProduction ? "0.0.0.0" : "127.0.0.1";
+    return this.isProduction ? '0.0.0.0' : '127.0.0.1';
   }
 
   public static get port() {
-    return parseInt(process.env.PORT || "80");
+    return parseInt(process.env.PORT || '80');
   }
 }
