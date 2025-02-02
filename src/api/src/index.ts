@@ -7,6 +7,6 @@ const server = createHTTPServer({
   router: appRouter,
 })
 
-server.listen(3000, Environment.host, () => {
-  logger.info("Server is running on http://localhost:3000")
+server.listen(Environment.port, Environment.host, () => {
+  logger.info(`Server listening on ${Environment.host}:${Environment.port}`);
 })
