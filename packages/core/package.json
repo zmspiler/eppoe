@@ -1,7 +1,7 @@
 {
   "name": "@eppoe/core",
   "version": "0.0.1-alpha.1",
-  "description": "A smooth, easy to use UI library for building beautiful, responsive web applications.",
+  "description": "A smooth, easy to use react UI library for building beautiful, responsive web applications.",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
