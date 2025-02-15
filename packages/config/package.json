@@ -1,0 +1,18 @@
+{
+  "name": "@eppoe/config",
+  "version": "1.0.1",
+  "main": "index.js",
+  "type": "module",
+  "author": "zmspiler",
+  "license": "MIT",
+  "description": "For internal use only",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "prettier": ">=3.5.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.1"
+  }
+}
