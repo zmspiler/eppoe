@@ -1,5 +1,11 @@
+import { Button } from "@eppoe/core";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Button />
+    </>
+  );
 }
 
 export default App;
