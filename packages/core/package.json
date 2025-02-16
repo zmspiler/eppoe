@@ -4,6 +4,7 @@
   "description": "A smooth, easy to use react UI library for building beautiful, responsive web applications.",
   "module": "dist/index.mjs",
   "main": "dist/index.cjs",
+  "types": "dist/index.d.ts",
   "keywords": [
     "ui",
     "library",

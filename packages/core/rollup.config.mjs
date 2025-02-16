@@ -30,5 +30,6 @@ export default [
       file: 'dist/index.d.ts',
     },
     plugins: [dts()],
+    external: [/\.css$/],
   },
 ]

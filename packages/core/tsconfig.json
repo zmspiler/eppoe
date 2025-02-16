@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ES5",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "moduleResolution": "bundler",
-    // Code Quality
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "allowJs": false,
@@ -16,6 +17,7 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
     "strict": true,
     "jsx": "react-jsx"
   },
