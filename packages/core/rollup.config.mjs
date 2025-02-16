@@ -2,6 +2,7 @@ import json from '@rollup/plugin-json'
 import typescript from '@rollup/plugin-typescript'
 import postcss from 'rollup-plugin-postcss'
 import { dts } from 'rollup-plugin-dts'
+import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 
 export default [
   {
@@ -17,6 +18,7 @@ export default [
       },
     ],
     plugins: [
+      peerDepsExternal(),
       json(),
       typescript(),
       postcss({
