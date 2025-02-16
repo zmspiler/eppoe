@@ -12,7 +12,8 @@
     "react"
   ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "dev": "pnpm build --watch"
   },
   "author": "Žiga Maj Špiler <maj@passways.io>",
   "license": "MIT",
@@ -21,14 +22,15 @@
     "url": "https://github.com/zmspiler/eppoe"
   },
   "peerDependencies": {
-    "react": ">=19.0.0",
-    "react-dom": ">=19.0.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-typescript": "^12.1.2",
     "@types/react": "^19.0.8",
     "postcss": "^8.5.2",
+    "prettier": "^3.5.1",
     "react": "^19.0.0",
     "rollup": "^4.34.7",
     "rollup-plugin-dts": "^6.1.1",

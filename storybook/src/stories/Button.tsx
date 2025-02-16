@@ -1,7 +1,5 @@
-import React from 'react'
-
 import './button.css'
-
+import { EoButton } from '@eppoe/core'
 export interface ButtonProps {
   /** Is this the principal call to action on the page? */
   primary?: boolean
@@ -36,6 +34,7 @@ export const Button = ({
       {...props}
     >
       {label}
+      <EoButton text="Button" />
     </button>
   )
 }
