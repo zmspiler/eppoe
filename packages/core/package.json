@@ -2,16 +2,37 @@
   "name": "@eppoe/core",
   "version": "0.0.1-alpha.1",
   "description": "A smooth, easy to use react UI library for building beautiful, responsive web applications.",
+  "module": "dist/index.mjs",
+  "main": "dist/index.cjs",
   "keywords": [
     "ui",
     "library",
     "components",
     "react"
   ],
-  "author": "zmspiler",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "author": "Žiga Maj Špiler <maj@passways.io>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zmspiler/eppoe"
+  },
+  "peerDependencies": {
+    "react": ">=19.0.0",
+    "react-dom": ">=19.0.0"
+  },
   "devDependencies": {
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-typescript": "^12.1.2",
     "@types/react": "^19.0.8",
+    "postcss": "^8.5.2",
+    "react": "^19.0.0",
+    "rollup": "^4.34.7",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.8.1",
     "typescript": "^5.7.3"
   },
   "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"
