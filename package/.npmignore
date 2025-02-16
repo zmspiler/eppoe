@@ -1,0 +1,9 @@
+.storybook/
+node_modules/
+src/
+.gitignore
+.prettierignore
+.prettierrc
+pnpm-lock.yaml
+rollup.config.mjs
+tsconfig.json

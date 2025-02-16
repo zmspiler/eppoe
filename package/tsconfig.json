@@ -21,5 +21,10 @@
     "strict": true,
     "jsx": "react-jsx"
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "package/src/components",
+    "package/src/global.d.ts",
+    "package/src/index.ts"
+  ]
 }
