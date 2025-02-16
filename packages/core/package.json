@@ -2,15 +2,6 @@
   "name": "@eppoe/core",
   "version": "0.0.1-alpha.1",
   "description": "A smooth, easy to use react UI library for building beautiful, responsive web applications.",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/types/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "tsc"
-  },
   "keywords": [
     "ui",
     "library",
@@ -19,15 +10,9 @@
   ],
   "author": "zmspiler",
   "license": "MIT",
-  "peerDependencies": {
-    "react": ">=19.0.0",
-    "react-dom": ">=19.0.0"
-  },
   "devDependencies": {
-    "@eppoe/config": "^1.0.1",
     "@types/react": "^19.0.8",
     "typescript": "^5.7.3"
   },
-  "prettier": "@eppoe/config",
   "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"
 }
