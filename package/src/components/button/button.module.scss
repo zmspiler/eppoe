@@ -1,0 +1,62 @@
+@use '../../styles/mixins';
+
+.button {
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: var(--eo-border-radius);
+  font-weight: bold;
+  position: relative;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: none;
+
+  @media (prefers-reduced-motion: no-preference) {
+    @include mixins.transition-all;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.primary {
+  border: 2px solid var(--eo-primary-color);
+  color: var(--eo-primary-color);
+
+  @media (prefers-reduced-motion: no-preference) {
+    @include mixins.transition-all;
+  }
+
+  &.filled {
+    color: white;
+    background-color: var(--eo-primary-color);
+  }
+}
+
+.secondary {
+  border: 2px solid var(--eo-secondary-color);
+  color: var(--eo-secondary-color);
+
+  @media (prefers-reduced-motion: no-preference) {
+    @include mixins.transition-all;
+  }
+
+  &.filled {
+    color: white;
+    background-color: var(--eo-secondary-color);
+  }
+}

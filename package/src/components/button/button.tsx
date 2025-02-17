@@ -1,4 +1,4 @@
-import styles from './index.module.css'
+import styles from './button.module.scss'
 
 export function EoButton({
   children,
@@ -7,10 +7,13 @@ export function EoButton({
   className,
   disabled = false,
   variant = 'primary',
+  filled = false,
 }: Props) {
   return (
     <button
-      className={`${styles.button} ${className} ${styles[variant]}`}
+      className={`${styles.button} ${className} ${styles[variant]} ${
+        filled ? styles.filled : ''
+      }`}
       disabled={disabled}
       onClick={onClick}
     >
@@ -26,4 +29,5 @@ type Props = {
   className?: string
   variant: 'primary' | 'secondary'
   disabled?: boolean
+  filled?: boolean
 }

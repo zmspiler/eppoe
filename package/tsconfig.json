@@ -10,6 +10,7 @@
     "allowJs": false,
     "noImplicitAny": true,
     "noImplicitReturns": true,
+    "esModuleInterop": true,
     "noFallthroughCasesInSwitch": true,
     "strictFunctionTypes": true,
     "noImplicitThis": true,

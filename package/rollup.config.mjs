@@ -1,8 +1,8 @@
 import json from '@rollup/plugin-json'
 import typescript from '@rollup/plugin-typescript'
-import postcss from 'rollup-plugin-postcss'
 import { dts } from 'rollup-plugin-dts'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
+import sass from 'rollup-plugin-sass'
 
 export default [
   {
@@ -21,9 +21,7 @@ export default [
       peerDepsExternal(),
       json(),
       typescript(),
-      postcss({
-        modules: true,
-      }),
+      sass({ api: 'modern' }),
     ],
   },
   {
@@ -32,6 +30,6 @@ export default [
       file: 'dist/index.d.ts',
     },
     plugins: [dts()],
-    external: [/\.css$/],
+    external: [/\.scss$/],
   },
 ]
