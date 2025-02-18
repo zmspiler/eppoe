@@ -1,6 +1,6 @@
 {
   "name": "eppoe",
-  "version": "0.0.1-alpha.2",
+  "version": "0.0.1-alpha.3",
   "description": "A smooth, easy to use react UI library for building beautiful, responsive web applications.",
   "module": "dist/index.mjs",
   "main": "dist/index.cjs",
