@@ -3,6 +3,7 @@ import typescript from '@rollup/plugin-typescript'
 import { dts } from 'rollup-plugin-dts'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import sass from 'rollup-plugin-sass'
+import { typescriptPaths } from 'rollup-plugin-typescript-paths'
 
 export default [
   {
@@ -19,6 +20,7 @@ export default [
     ],
     plugins: [
       peerDepsExternal(),
+      typescriptPaths(),
       json(),
       typescript(),
       sass({ api: 'modern' }),

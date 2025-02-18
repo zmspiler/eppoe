@@ -1,5 +1,12 @@
 :root {
-  --eo-primary-color: #d7721a;
+  --eo-primary-color: #f5801a;
   --eo-secondary-color: #938f8a;
-  --eo-border-radius: 0.5rem;
+
+  --eo-border-radius-xs: 0.125rem;
+  --eo-border-radius-sm: 0.25rem;
+  --eo-border-radius-md: 0.5rem;
+  --eo-border-radius-lg: 0.75rem;
+  --eo-border-radius-xl: 1rem;
+  --eo-border-radius-2xl: 1.5rem;
+  --eo-border-radius-3xl: 2rem;
 }

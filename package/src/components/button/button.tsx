@@ -1,3 +1,4 @@
+import { Size } from 'types/size'
 import styles from './button.module.scss'
 
 export function EoButton({
@@ -30,4 +31,5 @@ type Props = {
   variant: 'primary' | 'secondary'
   disabled?: boolean
   filled?: boolean
+  size?: Size
 }
