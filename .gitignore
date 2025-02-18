@@ -1,7 +1,3 @@
-dist/
-node_modules/
-
-# Storybook
-*storybook.log
-.cache/
-storybook-static/
+node_modules
+dist
+.DS_Store

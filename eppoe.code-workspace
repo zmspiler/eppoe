@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "core",
+      "path": "packages/core"
+    },
+    {
+      "name": "utils",
+      "path": "packages/utils"
+    },
+    {
+      "name": "root",
+      "path": "."
+    }
+  ],
+  "settings": {}
+}
