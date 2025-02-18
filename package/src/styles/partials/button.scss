@@ -1,0 +1,53 @@
+@use 'partials/mixins';
+
+.eo-button {
+  background-color: transparent;
+  padding: 10px 20px;
+  font-weight: bold;
+  position: relative;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+
+  @media (prefers-reduced-motion: no-preference) {
+    @include mixins.transition-all;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  &.eo-primary {
+    border: 2px solid var(--eo-primary-color);
+    color: var(--eo-primary-color);
+
+    &.eo-filled {
+      background-color: var(--eo-primary-color);
+      color: white;
+    }
+  }
+
+  &.eo-secondary {
+    border: 2px solid var(--eo-secondary-color);
+    color: var(--eo-secondary-color);
+
+    &.eo-filled {
+      background-color: var(--eo-secondary-color);
+      color: white;
+    }
+  }
+}

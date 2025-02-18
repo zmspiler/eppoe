@@ -21,10 +21,18 @@ export default [
     ],
     plugins: [
       peerDepsExternal(),
+      sass({
+        api: 'modern',
+        options: {
+          style: 'compressed',
+        },
+        output: 'dist/index.css',
+        include: 'src/styles/globals.scss',
+      }),
       json(),
       typescript(),
-      sass({ api: 'modern' }),
     ],
+    external: ['react', 'react-dom'],
   },
   {
     input: 'src/index.ts',

@@ -1,5 +1,4 @@
 import { Size } from 'types/size'
-import styles from './button.module.scss'
 
 export function EoButton({
   children,
@@ -9,12 +8,11 @@ export function EoButton({
   disabled = false,
   variant = 'primary',
   filled = false,
+  rounded = 'md',
 }: Props) {
   return (
     <button
-      className={`${styles.button} ${className} ${styles[variant]} ${
-        filled ? styles.filled : ''
-      }`}
+      className={`eo-button eo-${variant} eo-rounded-${rounded} ${filled && 'eo-filled'}`}
       disabled={disabled}
       onClick={onClick}
     >
@@ -31,5 +29,5 @@ type Props = {
   variant: 'primary' | 'secondary'
   disabled?: boolean
   filled?: boolean
-  size?: Size
+  rounded?: Size
 }

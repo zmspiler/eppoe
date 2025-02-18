@@ -1,13 +1,11 @@
-import { fn } from '@storybook/test'
-import { EoButton } from '../package/src'
+import { EoButton } from '../package/src/components/button/button'
+import { Meta } from '@storybook/react'
 
-export default {
+const meta: Meta<typeof EoButton> = {
   component: EoButton,
   parameters: {
     layout: 'centered',
   },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
 }
 
 export const Regular = {
@@ -26,10 +24,12 @@ export const Disabled = {
   },
 }
 
-export const Hollow = {
+export const Outline = {
   args: {
     text: 'Button',
     variant: 'secondary',
     filled: false,
   },
 }
+
+export default meta
