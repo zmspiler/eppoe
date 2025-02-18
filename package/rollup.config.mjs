@@ -3,24 +3,24 @@ import typescript from '@rollup/plugin-typescript'
 import { dts } from 'rollup-plugin-dts'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
 import sass from 'rollup-plugin-sass'
-import { typescriptPaths } from 'rollup-plugin-typescript-paths'
+import tsconfig from './tsconfig.json' with { type: 'json' }
+import packageJson from './package.json' with { type: 'json' }
 
 export default [
   {
     input: 'src/index.ts',
     output: [
       {
-        file: 'dist/index.mjs',
+        file: packageJson.module,
         format: 'esm',
       },
       {
-        file: 'dist/index.cjs',
+        file: packageJson.main,
         format: 'cjs',
       },
     ],
     plugins: [
       peerDepsExternal(),
-      typescriptPaths(),
       json(),
       typescript(),
       sass({ api: 'modern' }),
@@ -29,9 +29,16 @@ export default [
   {
     input: 'src/index.ts',
     output: {
-      file: 'dist/index.d.ts',
+      file: packageJson.types,
     },
-    plugins: [dts()],
+    plugins: [
+      dts({
+        compilerOptions: {
+          baseUrl: tsconfig.compilerOptions.baseUrl,
+          paths: tsconfig.compilerOptions.paths,
+        },
+      }),
+    ],
     external: [/\.scss$/],
   },
 ]

@@ -39,9 +39,6 @@ importers:
       rollup-plugin-sass:
         specifier: ^1.15.2
         version: 1.15.2(rollup@4.34.7)
-      rollup-plugin-typescript-paths:
-        specifier: ^1.5.0
-        version: 1.5.0(typescript@5.7.3)
       tslib:
         specifier: ^2.8.1
         version: 2.8.1
@@ -396,11 +393,6 @@ packages:
     resolution: {integrity: sha512-YhTYW0rgvc/2VqpbGXAWrGQjexLcRJvvS5lpG15OAnhVqHDOGMlEXN8u4ctCpmdJiuk2nzxQDWEPbJkqJijb2g==}
     engines: {node: '>=10'}
 
-  rollup-plugin-typescript-paths@1.5.0:
-    resolution: {integrity: sha512-zly2aiGNjYJNq5YUi6eyGrQnCYUQ8b5czOtHZIGriwG9U3Ba2F9hlSklafXCdsNulK/IlNmE0Kzj0h+fVV32pA==}
-    peerDependencies:
-      typescript: '>=3.4'
-
   rollup@4.34.7:
     resolution: {integrity: sha512-8qhyN0oZ4x0H6wmBgfKxJtxM7qS98YJ0k0kNh5ECVtuchIJ7z9IVVvzpmtQyT10PXKMtBxYr1wQ5Apg8RS8kXQ==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
@@ -704,10 +696,6 @@ snapshots:
       sass: 1.85.0
     transitivePeerDependencies:
       - rollup
-
-  rollup-plugin-typescript-paths@1.5.0(typescript@5.7.3):
-    dependencies:
-      typescript: 5.7.3
 
   rollup@4.34.7:
     dependencies:
